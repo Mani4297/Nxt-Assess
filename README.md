@@ -1,16 +1,58 @@
-# React + Vite
+# Nxt Assess
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive online assessment application built using React and Vite.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+https://nxt-assess-hazel.vercel.app/login
 
-## React Compiler
+## 📌 About the Project
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Nxt Assess is an online assessment platform where users can log in, start an assessment, answer different types of questions, track their progress, submit the assessment, and view their results.
 
-## Expanding the ESLint configuration
+The application was developed as an individual React project to practice React concepts such as components, hooks, routing, authentication, API integration, Context API, conditional rendering, and responsive design.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Features
+
+- User login authentication
+- Login error handling
+- Show/Hide password
+- Protected routes
+- Responsive Home page
+- Start Assessment functionality
+- Questions fetched from REST API
+- Loading state while fetching questions
+- Failure view with Retry option
+- Default question options
+- Image-based question options
+- Single-select questions
+- Question navigation
+- Answered and unanswered question tracking
+- 10-minute assessment timer
+- Assessment submission
+- Automatic submission when time expires
+- Score calculation
+- Assessment results
+- Reattempt assessment
+- Logout functionality
+- Not Found page
+- Responsive design for mobile, tablet, and desktop
+
+## 🛠️ Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript
+- React.js
+- React Router
+- Context API
+- REST APIs
+- Vite
+- Git
+- GitHub
+- Vercel
+
+## 🔗 APIs Used
+
+### Login API
+
