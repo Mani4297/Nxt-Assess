@@ -1,0 +1,63 @@
+.assessment-configuration-container {
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  width: 260px;
+  flex-shrink: 0;
+}
+
+.counts-container {
+  display: flex;
+  gap: 16px;
+}
+
+.count-item {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #f8f9fd;
+}
+
+.count-number {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.answered-count {
+  color: #16a34a;
+}
+
+.unanswered-count {
+  color: #dc2626;
+}
+
+.count-label {
+  font-size: 12px;
+  color: #64748b;
+  margin-top: 4px;
+}
+
+.submit-assessment-button {
+  width: 100%;
+  margin-top: 20px;
+  background-color: #16a34a;
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.submit-assessment-button:hover {
+  background-color: #15803d;
+}
+
+@media (max-width: 768px) {
+  .assessment-configuration-container {
+    width: 100%;
+  }
+}

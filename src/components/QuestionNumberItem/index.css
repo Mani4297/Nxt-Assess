@@ -1,0 +1,29 @@
+.question-number-button {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #cbd5e1;
+  background-color: #ffffff;
+  color: #334155;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.answered-question-number {
+  background-color: #16a34a;
+  border-color: #16a34a;
+  color: #ffffff;
+}
+
+.unanswered-question-number {
+  background-color: #ffffff;
+  border-color: #cbd5e1;
+  color: #64748b;
+}
+
+.active-question-number {
+  background-color: #4f46e5;
+  border-color: #4f46e5;
+  color: #ffffff;
+}

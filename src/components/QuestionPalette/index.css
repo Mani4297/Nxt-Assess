@@ -1,0 +1,16 @@
+.question-palette-container {
+  margin-top: 20px;
+}
+
+.palette-heading {
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.question-numbers-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
