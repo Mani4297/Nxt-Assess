@@ -15,9 +15,10 @@ const Select = props => {
   return (
     <select
       className="select-input"
-      value={answers[questionId]}
+      value={answers[questionId] || ''}
       onChange={onChangeOption}
     >
+      <option value="">Select an option</option>
       {options.map(option => (
         <option key={option.id} value={option.id}>
           {option.text}

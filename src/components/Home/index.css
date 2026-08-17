@@ -1,6 +1,6 @@
 .home-page {
   min-height: 100vh;
-  background-color: #f8f9fd;
+  background: linear-gradient(135deg, #f8f9fd 0%, #f0f4ff 100%);
 }
 
 .home-content {
@@ -35,20 +35,54 @@
   background-color: #4f46e5;
   color: #ffffff;
   border: none;
-  padding: 12px 28px;
-  border-radius: 6px;
-  font-size: 15px;
+  padding: 14px 40px;
+  border-radius: 8px;
+  font-size: 16px;
   font-weight: 600;
   cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
 }
 
 .start-assessment-button:hover {
   background-color: #4338ca;
+  box-shadow: 0 8px 24px rgba(79, 70, 229, 0.4);
+  transform: translateY(-2px);
+}
+
+.start-assessment-button:active {
+  transform: translateY(0);
 }
 
 .home-image {
   width: 400px;
   max-width: 100%;
+}
+
+.home-illustration {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.illustration-svg {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+  filter: drop-shadow(0 8px 24px rgba(79, 70, 229, 0.15));
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 @media (max-width: 768px) {

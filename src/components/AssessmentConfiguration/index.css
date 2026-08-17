@@ -45,19 +45,71 @@
   background-color: #16a34a;
   color: #ffffff;
   border: none;
-  padding: 10px;
-  border-radius: 6px;
-  font-size: 14px;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 15px;
   font-weight: 600;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .submit-assessment-button:hover {
   background-color: #15803d;
+  box-shadow: 0 6px 20px rgba(22, 163, 74, 0.4);
+  transform: translateY(-2px);
+}
+
+.submit-assessment-button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 1024px) {
+  .assessment-configuration-container {
+    width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
   .assessment-configuration-container {
     width: 100%;
+    padding: 20px;
+  }
+
+  .count-number {
+    font-size: 20px;
+  }
+
+  .submit-assessment-button {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .assessment-configuration-container {
+    padding: 16px;
+    border-radius: 10px;
+  }
+
+  .counts-container {
+    gap: 12px;
+  }
+
+  .count-item {
+    padding: 8px;
+  }
+
+  .count-number {
+    font-size: 18px;
+  }
+
+  .count-label {
+    font-size: 11px;
+  }
+
+  .submit-assessment-button {
+    padding: 10px;
+    font-size: 13px;
+    margin-top: 16px;
   }
 }

@@ -22,23 +22,12 @@ const App = () => {
   const [assessmentStatus, setAssessmentStatus] = useState('IN_PROGRESS')
 
   // Called once when the questions API succeeds.
-  // SINGLE_SELECT questions must start "answered" because their
-  // first option is selected by default.
+  // No questions are pre-answered - users must answer all questions
   const initializeQuestions = questions => {
-    const initialAnswers = {}
-    let initialAnsweredCount = 0
-
-    questions.forEach(question => {
-      if (question.options_type === 'SINGLE_SELECT') {
-        initialAnswers[question.id] = question.options[0].id
-        initialAnsweredCount += 1
-      }
-    })
-
     setQuestionsList(questions)
-    setAnswers(initialAnswers)
-    setAnsweredCount(initialAnsweredCount)
-    setUnansweredCount(questions.length - initialAnsweredCount)
+    setAnswers({})
+    setAnsweredCount(0)
+    setUnansweredCount(questions.length)
     setCurrentQuestionIndex(0)
   }
 

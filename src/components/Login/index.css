@@ -3,25 +3,35 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f8f9fd;
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
   padding: 16px;
 }
 
 .login-form {
   background-color: #ffffff;
   width: 100%;
-  max-width: 380px;
-  padding: 40px 32px;
-  border-radius: 10px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  max-width: 400px;
+  padding: 48px 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
 }
 
 .login-logo {
-  width: 140px;
-  align-self: center;
+  width: 130px;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
   margin-bottom: 32px;
+}
+
+.logo-svg {
+  width: 160px;
+  height: 80px;
+  filter: drop-shadow(0 2px 8px rgba(79, 70, 229, 0.15));
 }
 
 .input-container {
@@ -39,15 +49,25 @@
 }
 
 .input-field {
-  padding: 10px 12px;
-  border: 1px solid #cbd5e1;
-  border-radius: 6px;
+  padding: 12px 14px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
   font-size: 15px;
   outline: none;
+  background-color: #ffffff;
+  color: #1e293b;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.input-field::placeholder {
+  color: #94a3b8;
+  font-weight: 400;
 }
 
 .input-field:focus {
   border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
 }
 
 .checkbox-container {
@@ -71,20 +91,26 @@
   background-color: #4f46e5;
   color: #ffffff;
   border: none;
-  padding: 12px;
-  border-radius: 6px;
-  font-size: 15px;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 16px;
   font-weight: 600;
   cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 8px;
 }
 
 .login-button:hover {
   background-color: #4338ca;
+  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4);
+  transform: translateY(-2px);
 }
 
 .login-button:disabled {
   background-color: #a5a5f0;
   cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
 }
 
 .error-message {
@@ -94,8 +120,124 @@
   text-align: center;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1024px) {
   .login-form {
-    padding: 28px 20px;
+    max-width: 100%;
+    padding: 44px 36px;
+  }
+
+  .logo-svg {
+    width: 150px;
+    height: 75px;
+  }
+}
+
+@media (max-width: 768px) {
+  .login-form {
+    max-width: 100%;
+    padding: 40px 24px;
+  }
+
+  .logo-svg {
+    width: 140px;
+    height: 70px;
+  }
+
+  .input-field {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .login-form {
+    padding: 36px 22px;
+    max-width: 100%;
+  }
+
+  .logo-svg {
+    width: 130px;
+    height: 65px;
+  }
+
+  .input-label {
+    font-size: 11px;
+  }
+
+  .input-field {
+    padding: 11px 13px;
+    font-size: 15px;
+  }
+
+  .login-button {
+    padding: 13px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    padding: 12px;
+  }
+
+  .login-form {
+    padding: 32px 20px;
+    border-radius: 10px;
+  }
+
+  .logo-svg {
+    width: 120px;
+    height: 60px;
+  }
+
+  .input-container {
+    margin-bottom: 16px;
+  }
+
+  .input-label {
+    font-size: 11px;
+  }
+
+  .input-field {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  .login-button {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 380px) {
+  .login-form {
+    padding: 28px 16px;
+  }
+
+  .logo-svg {
+    width: 110px;
+    height: 55px;
+  }
+
+  .input-container {
+    margin-bottom: 14px;
+  }
+
+  .input-label {
+    font-size: 10px;
+  }
+
+  .input-field {
+    padding: 9px 11px;
+    font-size: 13px;
+  }
+
+  .login-button {
+    padding: 10px;
+    font-size: 13px;
+    margin-top: 6px;
+  }
+
+  .checkbox-label {
+    font-size: 12px;
   }
 }

@@ -36,15 +36,18 @@ const Results = () => {
       <Header />
       <div className="results-content">
         <div className="results-card">
-          <img
-            src={
-              isTimeUp
-                ? 'https://placehold.co/200x200/dc2626/ffffff?text=Time+Up'
-                : 'https://placehold.co/200x200/16a34a/ffffff?text=Submitted'
-            }
-            alt={isTimeUp ? 'time up' : 'submit'}
-            className="results-image"
-          />
+          <div className={`results-icon ${isTimeUp ? 'time-up-icon' : 'success-icon'}`}>
+            {isTimeUp ? (
+              <svg className="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+            ) : (
+              <svg className="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+            )}
+          </div>
 
           <h1 className="results-heading">
             {isTimeUp ? "Time's Up!" : 'Assessment Submitted'}

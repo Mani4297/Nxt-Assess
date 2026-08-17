@@ -65,11 +65,20 @@ const Login = () => {
   return (
     <div className="login-container">
       <form className="login-form" onSubmit={handleSubmit}>
-        <img
-          src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-logo-img.png"
-          alt="login website logo"
-          className="login-logo"
-        />
+        <div className="logo-container">
+          <svg viewBox="0 0 200 80" className="logo-svg">
+            <defs>
+              <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style={{stopColor: '#4f46e5', stopOpacity: 1}} />
+                <stop offset="100%" style={{stopColor: '#7c3aed', stopOpacity: 1}} />
+              </linearGradient>
+            </defs>
+            <rect x="10" y="10" width="60" height="60" rx="8" fill="url(#logoGradient)" />
+            <text x="40" y="50" fontSize="40" fontWeight="bold" fill="white" textAnchor="middle" fontFamily="Arial, sans-serif">N</text>
+            <text x="90" y="45" fontSize="28" fontWeight="700" fill="#1e293b" fontFamily="Arial, sans-serif">nxt</text>
+            <text x="90" y="68" fontSize="14" fontWeight="600" fill="#64748b" fontFamily="Arial, sans-serif">assess</text>
+          </svg>
+        </div>
 
         <div className="input-container">
           <label htmlFor="username" className="input-label">
