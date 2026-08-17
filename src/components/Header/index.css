@@ -3,18 +3,20 @@
   align-items: center;
   justify-content: space-between;
   padding: 14px 32px;
-  background-color: #ffffff;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 1px 6px rgba(15, 23, 42, 0.08);
   position: sticky;
   top: 0;
   z-index: 100;
+  backdrop-filter: blur(10px);
 }
 
 .header-logo {
   display: flex;
   align-items: center;
-  width: 180px;
-  height: 78px;
+  width: 200px;
+  height: 80px;
+  pointer-events: none;
 }
 
 .logo-svg {
@@ -31,7 +33,7 @@
   padding: 8px 20px;
   border-radius: 8px;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -53,8 +55,8 @@
   }
 
   .header-logo {
-    width: 150px;
-    height: 66px;
+    width: 170px;
+    height: 68px;
   }
 
   .logout-button {
@@ -69,8 +71,8 @@
   }
 
   .header-logo {
-    width: 120px;
-    height: 56px;
+    width: 140px;
+    height: 58px;
   }
 
   .logout-button {

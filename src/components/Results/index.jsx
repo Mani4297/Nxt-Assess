@@ -18,7 +18,7 @@ const formatTimeTaken = totalSeconds => {
 }
 
 const Results = () => {
-  const {questionsList, score, timeTaken, assessmentStatus, resetAssessment} =
+  const {questionsList, answers, score, timeTaken, assessmentStatus, resetAssessment} =
     useContext(EvaluationContext)
 
   const navigate = useNavigate()
@@ -30,6 +30,30 @@ const Results = () => {
 
   const totalQuestions = questionsList.length
   const isTimeUp = assessmentStatus === 'TIME_UP'
+
+  const reviewItems = questionsList.map((question, index) => {
+    const selectedOptionId = answers[question.id]
+    const selectedOption = question.options.find(
+      option => option.id === selectedOptionId,
+    )
+    const correctOption = question.options.find(option => option.is_correct === 'true')
+    const isCorrect = selectedOption !== undefined && selectedOption.is_correct === 'true'
+    const isUnanswered = selectedOption === undefined
+
+    return {
+      id: question.id,
+      number: index + 1,
+      questionText: question.question_text,
+      selectedAnswer: selectedOption ? selectedOption.text : 'Not answered',
+      correctAnswer: correctOption ? correctOption.text : 'N/A',
+      status: isUnanswered ? 'Unanswered' : isCorrect ? 'Correct' : 'Incorrect',
+      note: isCorrect
+        ? 'This answer is correct. Review the logic and keep this approach in mind for similar questions.'
+        : isUnanswered
+          ? 'This question was left unanswered. Try to review the concept and attempt it next time.'
+          : `Incorrect selection. The correct answer is “${correctOption?.text || 'the right option'}”. Review the concept behind this question.`,
+    }
+  })
 
   return (
     <div className="results-page">
@@ -70,6 +94,38 @@ const Results = () => {
           >
             Reattempt
           </button>
+        </div>
+
+        <div className="results-review-panel">
+          <div className="results-review-header">
+            <h2>Answer Review</h2>
+            <p>Check each answer and the quick feedback for every question.</p>
+          </div>
+
+          <div className="results-review-list">
+            {reviewItems.map(item => (
+              <div key={item.id} className={`review-result-item ${item.status.toLowerCase()}`}>
+                <div className="review-result-topbar">
+                  <span className="review-question-number">Q{item.number}</span>
+                  <span className={`review-result-status ${item.status.toLowerCase()}`}>
+                    {item.status}
+                  </span>
+                </div>
+
+                <p className="review-question-text">{item.questionText}</p>
+
+                <p className="review-answer-row">
+                  <span className="review-label">Selected:</span> {item.selectedAnswer}
+                </p>
+
+                <p className="review-answer-row">
+                  <span className="review-label">Correct:</span> {item.correctAnswer}
+                </p>
+
+                <p className="review-note">{item.note}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

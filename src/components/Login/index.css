@@ -3,23 +3,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  background: radial-gradient(circle at top, #eef2ff 0%, #e0e7ff 25%, #4f46e5 68%, #312e81 100%);
   padding: 16px;
 }
 
 .login-form {
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.97);
   width: 100%;
-  max-width: 400px;
-  padding: 48px 40px;
-  border-radius: 12px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  max-width: 420px;
+  padding: 42px 36px 34px;
+  border-radius: 18px;
+  box-shadow: 0 20px 50px rgba(39, 44, 90, 0.22);
   display: flex;
   flex-direction: column;
-}
-
-.login-logo {
-  width: 130px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
 }
 
 .logo-container {
@@ -30,10 +27,10 @@
 }
 
 .logo-svg {
-  width: 220px;
+  width: 240px;
   height: 110px;
   max-width: 100%;
-  filter: drop-shadow(0 2px 8px rgba(79, 70, 229, 0.15));
+  filter: drop-shadow(0 4px 12px rgba(79, 70, 229, 0.12));
 }
 
 .input-container {
@@ -44,20 +41,20 @@
 
 .input-label {
   font-size: 12px;
-  font-weight: 500;
-  color: #64748b;
-  margin-bottom: 6px;
-  letter-spacing: 0.5px;
+  font-weight: 700;
+  color: #475569;
+  margin-bottom: 8px;
+  letter-spacing: 0.06em;
 }
 
 .input-field {
-  padding: 12px 14px;
-  border: 2px solid #e2e8f0;
-  border-radius: 8px;
+  padding: 14px 16px;
+  border: 1.5px solid #dfe7f1;
+  border-radius: 10px;
   font-size: 15px;
   outline: none;
   background-color: #ffffff;
-  color: #1e293b;
+  color: #0f172a;
   transition: all 0.3s ease;
   font-weight: 500;
 }
@@ -69,13 +66,13 @@
 
 .input-field:focus {
   border-color: #4f46e5;
-  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
 }
 
 .checkbox-container {
   display: flex;
   align-items: center;
-  margin-bottom: 24px;
+  margin: 2px 0 22px;
   color: #334155;
 }
 
@@ -85,37 +82,37 @@
   margin-right: 10px;
   cursor: pointer;
   accent-color: #4f46e5;
-  border: 1px solid #1f2937;
+  filter: saturate(1.1);
 }
 
 .checkbox-label {
   font-size: 14px;
   color: #334155;
   cursor: pointer;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .login-button {
-  background-color: #4f46e5;
+  background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%);
   color: #ffffff;
   border: none;
   padding: 14px;
-  border-radius: 8px;
+  border-radius: 10px;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin-top: 8px;
+  margin-top: 6px;
 }
 
 .login-button:hover {
-  background-color: #4338ca;
-  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4);
-  transform: translateY(-2px);
+  background: linear-gradient(135deg, #4338ca 0%, #3730a3 100%);
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.35);
+  transform: translateY(-1px);
 }
 
 .login-button:disabled {
-  background-color: #a5a5f0;
+  background: #a5b4fc;
   cursor: not-allowed;
   transform: none;
   box-shadow: none;
@@ -126,16 +123,17 @@
   font-size: 13px;
   margin-top: 14px;
   text-align: center;
+  font-weight: 600;
 }
 
 @media (max-width: 1024px) {
   .login-form {
     max-width: 100%;
-    padding: 44px 36px;
+    padding: 38px 32px 28px;
   }
 
   .logo-svg {
-    width: 200px;
+    width: 220px;
     height: 100px;
   }
 }
@@ -143,12 +141,12 @@
 @media (max-width: 768px) {
   .login-form {
     max-width: 100%;
-    padding: 40px 24px;
+    padding: 34px 24px 24px;
   }
 
   .logo-svg {
-    width: 180px;
-    height: 90px;
+    width: 200px;
+    height: 92px;
   }
 
   .input-field {
@@ -158,13 +156,13 @@
 
 @media (max-width: 640px) {
   .login-form {
-    padding: 36px 22px;
+    padding: 30px 20px 22px;
     max-width: 100%;
   }
 
   .logo-svg {
-    width: 170px;
-    height: 85px;
+    width: 180px;
+    height: 84px;
   }
 
   .input-label {
@@ -188,13 +186,13 @@
   }
 
   .login-form {
-    padding: 32px 20px;
-    border-radius: 10px;
+    padding: 28px 18px 20px;
+    border-radius: 12px;
   }
 
   .logo-svg {
-    width: 155px;
-    height: 78px;
+    width: 160px;
+    height: 76px;
   }
 
   .input-container {
@@ -202,7 +200,7 @@
   }
 
   .input-label {
-    font-size: 11px;
+    font-size: 10px;
   }
 
   .input-field {
@@ -218,11 +216,11 @@
 
 @media (max-width: 380px) {
   .login-form {
-    padding: 28px 16px;
+    padding: 24px 14px 18px;
   }
 
   .logo-svg {
-    width: 145px;
+    width: 150px;
     height: 72px;
   }
 
