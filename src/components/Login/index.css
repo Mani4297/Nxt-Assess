@@ -25,12 +25,14 @@
 .logo-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 32px;
+  align-items: center;
+  margin-bottom: 28px;
 }
 
 .logo-svg {
-  width: 160px;
-  height: 80px;
+  width: 220px;
+  height: 110px;
+  max-width: 100%;
   filter: drop-shadow(0 2px 8px rgba(79, 70, 229, 0.15));
 }
 
@@ -74,17 +76,23 @@
   display: flex;
   align-items: center;
   margin-bottom: 24px;
+  color: #334155;
 }
 
 .checkbox-container input {
-  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
   cursor: pointer;
+  accent-color: #4f46e5;
+  border: 1px solid #1f2937;
 }
 
 .checkbox-label {
   font-size: 14px;
   color: #334155;
   cursor: pointer;
+  font-weight: 500;
 }
 
 .login-button {
@@ -127,8 +135,8 @@
   }
 
   .logo-svg {
-    width: 150px;
-    height: 75px;
+    width: 200px;
+    height: 100px;
   }
 }
 
@@ -139,8 +147,8 @@
   }
 
   .logo-svg {
-    width: 140px;
-    height: 70px;
+    width: 180px;
+    height: 90px;
   }
 
   .input-field {
@@ -155,8 +163,8 @@
   }
 
   .logo-svg {
-    width: 130px;
-    height: 65px;
+    width: 170px;
+    height: 85px;
   }
 
   .input-label {
@@ -185,8 +193,8 @@
   }
 
   .logo-svg {
-    width: 120px;
-    height: 60px;
+    width: 155px;
+    height: 78px;
   }
 
   .input-container {
@@ -214,8 +222,8 @@
   }
 
   .logo-svg {
-    width: 110px;
-    height: 55px;
+    width: 145px;
+    height: 72px;
   }
 
   .input-container {
